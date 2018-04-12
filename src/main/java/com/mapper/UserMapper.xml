@@ -9,4 +9,7 @@
 	<select id="GetUserList" resultType="com.pojo.User">
 		SELECT <include refid="User_Column_List"/> FROM user
 	</select>
+	<select id="getUserByUnamePassword" parameterType="String" resultType="com.pojo.User">
+		SELECT <include refid="User_Column_List"/> FROM user WHERE Uname = #{username}
+	</select>
 </mapper>
